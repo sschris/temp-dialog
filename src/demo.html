@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dialog.css">
+</head>
+<body>
+    <button id="btn">二次确认弹窗</button>
+
+    <button id="btn2">仅提示弹窗</button>
+
+    <script src="https://static.hdslb.com/js/jquery.min.js"></script>
+    <script src="http://wpg.biligame.com/public/seajs/sea.js"></script>
+    <script src="http://wpg.biligame.com/public/seajs/sea.config.js"></script>
+    <script>
+        seajs.use('./dialog.js', function(Dialog) {
+            /**
+             * @params mask(Boolean) 是否需要遮罩
+             * @params btns(String Array) 要显示的按钮及文案
+             * @params btnEvents(Function Array) 每个按钮点击后需要执行的函数，顺序对应 btns 参数
+             */
+            $('#btn').click(function() {
+                var dialog = new Dialog({
+                    title: "提示",
+                    content: '确认删除吗？',
+                    mask: false,
+                    btns: ['取消支付', '我知道了，确-认支付'],
+                    btnEvents: [
+                        function() { dialog.remove(); },
+                        function() {
+                            alert('此处执行继续支付操作');
+                            dialog.remove();
+                        }
+                    ]
+                });
+            });
+
+            $('#btn2').click(function() {
+                var dialog = new Dialog({
+                    title: "提示",
+                    content: '你尚未绑定支付方式',
+                    mask: true,
+                    btns: ['我知道了'],
+                    btnEvents: [
+                        function() { dialog.remove(); }
+                    ]
+                });
+            });
+        });
+    </script>
+</body>
+</html>

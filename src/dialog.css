@@ -1,0 +1,127 @@
+.bui-dialog.theme-mask .d-wrap {
+	-webkit-box-shadow: 0 1px 3px rgba(23,116,153,.15);
+	box-shadow: 0 1px 3px rgba(23,116,153,.15)
+}
+
+.bui-dialog {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10100;
+	width: 100%;
+	height: 100%
+}
+
+.bui-dialog.theme-mask {
+	background-color: rgba(0,0,0,.5)
+}
+
+.bui-dialog .d-wrap {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 10;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+	width: 460px;
+	padding: 40px 30px 50px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: 0 2px 15px rgba(0,0,0,.35);
+	box-shadow: 0 2px 15px rgba(0,0,0,.35);
+}
+
+.bui-dialog .d-wrap .d-body {
+    margin: 0;
+    line-height: 40px;
+    color: #333;
+    font-size: 24px;
+}
+
+.bui-dialog .d-wrap .d-body .d-title {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0 15px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.bui-dialog .d-wrap .d-body .d-txt {
+	text-align: center;
+	word-break: break-all;
+	margin: 0;
+	line-height: 26px;
+	color: #333;
+	font-size: 17px;
+}
+
+.bui-dialog .d-wrap .d-body .d-txt.theme-align-center {
+	text-align: center;
+	padding: 5px 45px 40px;
+}
+
+.bui-dialog .d-wrap .d-foot {
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0;
+}
+
+.bui-dialog .d-wrap .d-foot:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+.bui-dialog .d-wrap .d-foot .d-foot-btn, .bui-dialog .d-wrap .d-foot .d-foot-btn:only-child {
+    display: inline-block;
+    text-align: center;
+    min-width: 180px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 38px;
+    line-height: 36px;
+    border-radius: 30px;
+    background-color: #30b5f2;
+    border: 1px solid #30b5f2;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 10px 10px;
+    transition: all .3s;
+}
+.bui-dialog .d-wrap .d-foot .d-foot-btn:hover, .bui-dialog .d-wrap .d-foot .d-foot-btn:only-child:hover {
+    background-color: #20a5e2;
+    border: 1px solid #20a5e2;
+}
+.bui-dialog .d-wrap .d-foot .d-foot-btn:first-child:not(:only-child) {
+    background-color: #fff;
+    border: 1px solid #999;
+    color: #999;
+}
+
+.bui-dialog .d-wrap .d-foot .d-foot-btn:first-child:not(:only-child):hover {
+    border: 1px solid #666;
+    color: #666;
+}
+
+.bui-dialog .d-wrap .d-foot .btn {
+	width: 130px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px
+}
+
+.bui-dialog .d-wrap .d-foot .btn.btn-full {
+	width: auto
+}
